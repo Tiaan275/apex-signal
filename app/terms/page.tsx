@@ -28,7 +28,7 @@ export default function TermsOfService() {
             </span>
             <h1 className="text-3xl font-black text-brand-text mb-2">Terms of Service</h1>
             <p className="text-sm text-brand-muted">
-              Effective date: 22 April 2026 · Governed by South African law
+              Effective at product launch · Governed by South African law
             </p>
           </div>
 

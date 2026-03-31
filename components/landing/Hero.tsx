@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { ArrowRight, TrendingUp, TrendingDown, Zap, ShieldCheck } from 'lucide-react'
+import { ArrowRight, TrendingUp, TrendingDown, Zap, ShieldCheck, Star } from 'lucide-react'
 import { track, EVENTS } from '@/lib/analytics'
 
 // ─── Ticker data ─────────────────────────────────────────────────────────────
@@ -146,43 +146,43 @@ export default function Hero() {
 
       {/* Main hero content */}
       <div className="relative z-10 flex-1 flex items-center">
-        <div className="max-w-7xl mx-auto px-6 py-16 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             {/* Left — copy */}
-            <div>
+            <div className="text-center lg:text-left">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-emerald mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-emerald mb-6 sm:mb-8">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-green pulse-dot" />
                 <span className="text-xs font-semibold text-brand-green tracking-wide">
-                  Launching 22 April 2026 · Waitlist Open
+                  Limited Early Access · Waitlist Open
                 </span>
               </div>
 
               {/* Headline */}
-              <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black leading-[1.1] tracking-tight mb-6">
-                Stop Losing Your{' '}
+              <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black leading-[1.08] tracking-tight mb-5 sm:mb-6">
+                Precision Signals.{' '}
                 <span className="gradient-text text-glow-emerald">
-                  Hard-Earned<br />Site Pay
-                </span>{' '}
-                to the Market
+                  Less Noise.
+                </span>
+                <br />Better Decisions.
               </h1>
 
               {/* Sub */}
-              <p className="text-lg text-brand-muted leading-relaxed mb-8 max-w-lg">
-                Precision algorithmic signals across JSE, Forex, Crypto &amp; US markets — built for
-                FIFO workers, offshore crew, and SA expats who need to trade smart between
-                rotations. Launching 22 April. Free tier included.
+              <p className="text-base sm:text-lg text-brand-muted leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
+                Algorithmic trading signals across JSE, Forex, Crypto &amp; US markets —
+                built for FIFO workers, offshore crew, and SA expats who need to act
+                decisively between rotations.
               </p>
 
               {/* CTA row */}
-              <div className="flex flex-col sm:flex-row gap-3 mb-10">
+              <div className="flex flex-col sm:flex-row gap-3 mb-8 sm:mb-10 justify-center lg:justify-start">
                 <a
                   href="#waitlist"
                   onClick={() => track(EVENTS.HERO_PRIMARY_CTA)}
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-green text-white font-bold text-sm hover:bg-brand-green/90 transition-all duration-200 glow-emerald hover:scale-105 active:scale-100"
                 >
-                  Join the Free Waitlist
+                  Get Early Access — Free
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
@@ -195,27 +195,27 @@ export default function Hero() {
               </div>
 
               {/* Trust row */}
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 justify-center lg:justify-start">
                 <div className="flex items-center gap-1.5 text-xs text-brand-muted">
-                  <ShieldCheck className="w-3.5 h-3.5 text-brand-green" />
+                  <ShieldCheck className="w-3.5 h-3.5 text-brand-green flex-shrink-0" />
                   POPIA Compliant
                 </div>
-                <div className="w-px h-4 bg-brand-border" />
+                <div className="w-px h-4 bg-brand-border hidden sm:block" />
                 <div className="flex items-center gap-1.5 text-xs text-brand-muted">
-                  <Zap className="w-3.5 h-3.5 text-brand-gold" />
-                  No FSP registration required
+                  <Zap className="w-3.5 h-3.5 text-brand-gold flex-shrink-0" />
+                  No experience required
                 </div>
-                <div className="w-px h-4 bg-brand-border" />
+                <div className="w-px h-4 bg-brand-border hidden sm:block" />
                 <div className="flex items-center gap-1.5 text-xs text-brand-muted">
-                  <span className="text-brand-green font-bold">Free</span>
-                  tier available at launch
+                  <Star className="w-3.5 h-3.5 text-brand-green flex-shrink-0" />
+                  Free tier included
                 </div>
               </div>
             </div>
 
             {/* Right — 3D signal cards */}
             <div
-              className="relative perspective-2000"
+              className="relative perspective-2000 mt-4 lg:mt-0"
               style={{
                 transform: `perspective(1200px) rotateY(${mousePos.x * 0.3}deg) rotateX(${-mousePos.y * 0.2}deg)`,
                 transition: 'transform 0.1s ease-out',
@@ -268,7 +268,7 @@ export default function Hero() {
                 {/* Live indicator */}
                 <div className="flex items-center justify-center gap-2 py-2">
                   <span className="w-2 h-2 rounded-full bg-brand-green pulse-dot" />
-                  <span className="text-xs text-brand-muted font-mono">Live signal feed · Updated every 15 min</span>
+                  <span className="text-xs text-brand-muted font-mono">Example signals · Illustrative data only</span>
                 </div>
               </div>
             </div>

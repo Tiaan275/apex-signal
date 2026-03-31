@@ -100,11 +100,11 @@ export default function FeaturesPreview() {
   const active = FEATURES.find(f => f.id === activeId)!
 
   return (
-    <section id="features" className="relative py-24 bg-brand-navy overflow-hidden">
+    <section id="features" className="relative py-20 sm:py-24 bg-brand-navy overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-40" />
       <div className="absolute inset-0 radial-glow" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass mb-6">

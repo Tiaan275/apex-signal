@@ -37,14 +37,14 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-24 overflow-hidden">
+    <section id="how-it-works" className="relative py-20 sm:py-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-brand-card/30" />
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-border to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-border to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass mb-6">
@@ -135,7 +135,7 @@ export default function HowItWorks() {
             href="#waitlist"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-brand-green text-white font-bold text-sm hover:bg-brand-green/90 transition-all duration-200 glow-emerald hover:scale-105"
           >
-            Start Getting Signals at Launch
+            Start Getting Signals — Free
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

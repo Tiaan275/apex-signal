@@ -17,7 +17,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'Features', href: '#features' },
-    { label: 'How It Works', href: '#how-it-works' },
+    { label: 'Markets', href: '#markets' },
     { label: 'Pricing', href: '#pricing' },
   ]
 
@@ -29,7 +29,7 @@ export default function Navbar() {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="w-8 h-8 rounded-lg bg-brand-green flex items-center justify-center glow-emerald group-hover:scale-110 transition-transform">

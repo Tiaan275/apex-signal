@@ -47,10 +47,10 @@ const PAIN_POINTS = [
 
 export default function PainPoints() {
   return (
-    <section className="relative py-24 bg-brand-navy overflow-hidden">
+    <section className="relative py-20 sm:py-24 bg-brand-navy overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-50" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass mb-6">

@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
             </span>
             <h1 className="text-3xl font-black text-brand-text mb-2">Privacy Policy</h1>
             <p className="text-sm text-brand-muted">
-              Effective date: 22 April 2026 · Last updated: 22 April 2026
+              Effective at product launch · Last updated: March 2026
             </p>
           </div>
 

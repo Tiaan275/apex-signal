@@ -5,9 +5,9 @@ import { ArrowRight, CheckCircle2, Loader2, Users, Lock, Zap } from 'lucide-reac
 import { track, EVENTS } from '@/lib/analytics'
 
 const SOCIAL_PROOF_STATS = [
-  { value: '22 Apr', label: 'Launch date' },
-  { value: '30 days', label: 'Pro trial — free' },
+  { value: '30 days', label: 'Pro trial — free at launch' },
   { value: '4 markets', label: 'JSE · FX · Crypto · US' },
+  { value: 'R0', label: 'No card required' },
 ]
 
 export default function WaitlistForm() {
@@ -43,7 +43,7 @@ export default function WaitlistForm() {
   }
 
   return (
-    <section id="waitlist" className="relative py-24 overflow-hidden">
+    <section id="waitlist" className="relative py-20 sm:py-24 overflow-hidden">
       {/* Backgrounds */}
       <div className="absolute inset-0 bg-brand-card/40" />
       <div className="absolute inset-0 bg-grid opacity-30" />
@@ -54,12 +54,12 @@ export default function WaitlistForm() {
         <div className="w-[600px] h-[400px] rounded-full bg-brand-green/8 blur-3xl" />
       </div>
 
-      <div className="relative max-w-2xl mx-auto px-6 text-center">
-        {/* Countdown badge */}
+      <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center">
+        {/* Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-emerald mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-green pulse-dot" />
           <span className="text-xs font-semibold text-brand-green tracking-wide">
-            Launching 22 April 2026 — Limited early-access spots
+            Limited Early Access — Spots Filling Fast
           </span>
         </div>
 
@@ -69,13 +69,13 @@ export default function WaitlistForm() {
           <br />From Day One.
         </h2>
 
-        <p className="text-lg text-brand-muted mb-10 max-w-lg mx-auto">
-          Join the free waitlist today and unlock 30 days of Pro at launch — no card required.
-          We&apos;ll notify you the moment Apex Signal goes live on 22 April.
+        <p className="text-base sm:text-lg text-brand-muted mb-10 max-w-lg mx-auto leading-relaxed">
+          Join the free waitlist and unlock 30 days of Pro at launch — no card required.
+          Early access members get signals before the general public.
         </p>
 
         {/* Social proof */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 mb-10">
           {SOCIAL_PROOF_STATS.map(stat => (
             <div key={stat.label} className="text-center">
               <p className="text-xl font-black gradient-text">{stat.value}</p>
@@ -85,7 +85,7 @@ export default function WaitlistForm() {
         </div>
 
         {/* Form card */}
-        <div className="glass rounded-2xl p-8 gradient-border glow-emerald">
+        <div className="glass rounded-2xl p-6 sm:p-8 gradient-border glow-emerald">
           {status === 'success' ? (
             <div className="py-6 flex flex-col items-center gap-4">
               <div className="w-16 h-16 rounded-full bg-brand-green/15 flex items-center justify-center glow-emerald">
@@ -93,9 +93,10 @@ export default function WaitlistForm() {
               </div>
               <h3 className="text-xl font-bold text-brand-text">You&apos;re on the list!</h3>
               <p className="text-sm text-brand-muted max-w-xs text-center leading-relaxed">
-                We&apos;ll email you the moment Apex Signal launches on{' '}
-                <span className="text-brand-green font-semibold">22 April 2026</span>.
-                Your 30-day Pro trial will be waiting — no card needed.
+                We&apos;ll email you the moment Apex Signal launches.
+                Your{' '}
+                <span className="text-brand-green font-semibold">30-day Pro trial</span>{' '}
+                will be waiting — no card needed.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 mt-1">
                 <div className="flex items-center gap-1.5 text-xs text-brand-muted">
@@ -157,7 +158,7 @@ export default function WaitlistForm() {
                   </>
                 ) : (
                   <>
-                    Join the Free Waitlist
+                    Get Early Access — Free
                     <ArrowRight className="w-4 h-4" />
                   </>
                 )}
